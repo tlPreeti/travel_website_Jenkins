@@ -55,7 +55,7 @@ pipeline{
                 sh """
                 echo \$DOCKER_PASS | sudo docker login -u \$DOCKER_USER --password-stdin
                 sudo docker push ${DOCKERHUB_USERNAME}/${DOCKERHUB_REPO}:${VERSION}
-                sudo docker push ${DOCKERHUB_USERNAME}/${DOCKERHUB_REPO}:latest
+                sudo docker push ${DOCKERHUB_USERNAME}/${DOCKER_IMAGE}:latest
                 """
             }
         }
