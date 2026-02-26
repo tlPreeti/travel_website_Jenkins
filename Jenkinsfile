@@ -3,7 +3,8 @@ pipeline{
 
     environment{
         DOCKERHUB_USERNAME = 'preetitl'
-        DOCKER_IMAGE = 'travel-site'
+        DOCKERHUB_REPO = 'travel-site'
+        DOCKER_IMAGE = 'webapp'
         VERSION = '$BUILD_ID'
     }
 
@@ -19,10 +20,18 @@ pipeline{
                 sh "sudo docker images"
                 }
         }
-
         stage("build docker image"){
             steps{
-                sh "sudo docker build -t ${DOCKERHUB_USERNAME}/${DOCKER_IMAGE}:${VERSION} ."
+                sh "sudo docker build -t ${DOCKER_IMAGE}"
+            }
+        }
+
+        stage("build docker tag"){
+            steps{
+                sh """
+                sudo docker tag ${DOCKER_IMAGE} ${DOCKERHUB_USERNAME}/${DOCKER_IMAGE}:${VERSION} 
+                sudo docker tag ${DOCKER_IMAGE} ${DOCKERHUB_USERNAME}/${DOCKERHUB_REPO}:latest
+                """
             }
         }
     }
