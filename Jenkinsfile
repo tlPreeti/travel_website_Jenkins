@@ -22,7 +22,7 @@ pipeline{
 
         stage("build docker image"){
             steps{
-                sh "sudo docker build -t ${DOCKERHUB_USERNAME}/${DOCKER_IMAGE}:${VERSION}"
+                sh "sudo docker build -t ${DOCKERHUB_USERNAME}/${DOCKER_IMAGE}:${VERSION} ."
             }
         }
     }
