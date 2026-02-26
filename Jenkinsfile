@@ -2,9 +2,9 @@ pipeline{
     agent any
 
     stages{
-        stage("to check docker"){
+        stage("to check docker images"){
             steps{
-                sh "docker --version"
+                sh "docker images"
                 }
             
         }
