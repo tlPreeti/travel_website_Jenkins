@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WanderVista Travel Agency</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+        }
+
+        nav h2 {
+            color: #0097b2;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #0097b2;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 90vh;
+            background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") no-repeat center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            background: rgba(0,0,0,0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .hero button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            border: none;
+            background: #0097b2;
+            color: white;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .hero button:hover {
+            background: #007a8f;
+        }
+
+        /* DESTINATIONS */
+        .destinations {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .destinations h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #0097b2;
+        }
+
+        .cards {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            width: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            padding: 15px;
+        }
+
+        /* ABOUT */
+        .about {
+            padding: 60px 10%;
+            background: #0097b2;
+            color: white;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        /* CONTACT */
+        .contact {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #0097b2;
+        }
+
+        .contact button {
+            padding: 12px 25px;
+            border: none;
+            background: #0097b2;
+            color: white;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact button:hover {
+            background: #007a8f;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>WanderVista</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h1>Explore The World With Us 🌍</h1>
+            <button>Book Your Trip</button>
+        </div>
+    </section>
+
+    <section class="destinations">
+        <h2>Popular Destinations</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris">
+                <h3>Paris</h3>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c" alt="Maldives">
+                <h3>Maldives</h3>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98" alt="Dubai">
+                <h3>Dubai</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>About Us</h2>
+        <p>
+            WanderVista is a premium travel agency dedicated to creating unforgettable travel experiences.
+            From romantic getaways to adventurous expeditions, we craft personalized journeys that match your dreams.
+        </p>
+    </section>
+
+    <section class="contact">
+        <h2>Ready to Travel?</h2>
+        <button>Contact Us</button>
+    </section>
+
+    <footer>
+        © 2026 WanderVista Travel Agency | Designed with ❤️
+    </footer>
+
+</body>
+</html>
