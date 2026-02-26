@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage("to check docker images"){
             steps{
-                sh "docker images"
+                sh "sudo docker images"
                 }
             
         }
